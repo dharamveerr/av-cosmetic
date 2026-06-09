@@ -25,7 +25,3 @@ npm-debug.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-# claude skill plugins / dev tooling (not part of the website)
-/.claude/skills/
-/frontend-design/
