@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
+import Logo from "./Logo";
 
 const links = [
   { href: "/", label: "Home" },
@@ -34,11 +35,8 @@ export default function Navbar() {
         }`}
       >
         <div className="mx-auto max-w-[1440px] px-6 lg:px-12 h-16 lg:h-20 flex items-center justify-between gap-8">
-          <Link href="/" className="flex items-baseline gap-2 group">
-            <span className="font-display text-2xl lg:text-[26px] tracking-tight italic" style={{ fontVariationSettings: "'SOFT' 50, 'opsz' 20" }}>
-              AV
-            </span>
-            <span className="eyebrow opacity-70 group-hover:opacity-100 transition-opacity">Cosmetic</span>
+          <Link href="/" className="flex items-center group">
+            <Logo className="h-9 lg:h-10 w-auto transition-opacity group-hover:opacity-80" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-9">
@@ -77,7 +75,7 @@ export default function Navbar() {
             className="fixed inset-0 z-[60] bg-ink text-bone lg:hidden"
           >
             <div className="flex items-center justify-between h-16 px-6 border-b border-bone/15">
-              <span className="font-display italic text-2xl">AV</span>
+              <Logo className="h-8 w-auto text-bone" variant="mark" />
               <button aria-label="Close" onClick={() => setOpen(false)} className="p-2 -mr-2">
                 <X className="w-5 h-5" />
               </button>
